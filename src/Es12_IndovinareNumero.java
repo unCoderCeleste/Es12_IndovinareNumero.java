@@ -10,7 +10,6 @@ posto giusto. Il programma perciò restituirebbe in output i numeri 2 (cifre cor
 import java.util.Scanner;
 
 import static java.lang.System.exit;
-
 public class Es12_IndovinareNumero {
     public static void main(String[] args) {
         Scanner ind= new Scanner(System.in);
@@ -44,13 +43,17 @@ public class Es12_IndovinareNumero {
             } else {
                 System.out.print("\n" +contatore + " numeri su 5 indovinati");
                 System.out.print("\nI numeri indovinati sommano: " + somma);
-                System.out.print("PROVA DI NUOVO!");
+                if(contotale==1) {
+                    System.out.print("\n\nHAI ESAURITO LE TUE OPPORTUNITÀ!");
+                }
+                else{
+                    System.out.print("\n\nPROVA DI NUOVO!");
+                }
             }
             contatore=0;
             contotale--;
             System.out.println("\n");
         }
         while(contotale>=1);
-
     }
 }
